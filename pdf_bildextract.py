@@ -117,3 +117,14 @@ for i in range(len(docu)):
             pix1.writePNG("data\page\images\p%s-%s.png" % (i, xref))
             pix1 = None
         pix = None
+
+
+
+
+import os
+
+directory = '/my_directory'
+for filename in os.listdir(directory):
+    if filename.endswith('.txt'):
+        with open(os.path.join(directory, filename)) as f:
+            print(f.read())
